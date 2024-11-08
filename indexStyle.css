@@ -1,0 +1,36 @@
+html {
+    height:100%;
+}
+
+body {
+    min-height:100%;
+    margin:0;
+    background-color: rgb(110, 62, 221);
+    text-align: center;
+    font-family: sans-serif;
+}
+
+header {
+  height: 50px;
+  
+}
+
+main { 
+  height: 1%;
+}
+
+footer {
+  height: 50px;
+  
+}
+
+/**** Trick: ****/
+
+body {
+  display: table;
+  width: 100%; 
+}
+
+body > footer {
+   display: table-row;
+}
