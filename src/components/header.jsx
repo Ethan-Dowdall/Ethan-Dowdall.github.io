@@ -1,6 +1,7 @@
-import SplitText from '/SplitText'
-import SquareIcon from '/src/assets/SquareIcon.png'
-import '/header.css'
+import SplitText from './SplitText';
+import SquareIcon from '../assets/SquareIcon.png';
+import './header.css';
+import { Link } from 'react-router-dom';
 
 function Header() {
     const handleAnimationComplete = () => {
@@ -28,35 +29,7 @@ function Header() {
                 </Link>
             </div>
             <div className="headerCenter">
-                <Link to="/"><SplitText
-                    text="home"
-                    className="text-2xl font-semibold text-center"
-                    delay={100}
-                    duration={0.6}
-                    ease="power3.out"
-                    splitType="chars"
-                    from={{ opacity: 0, y: 40 }}
-                    to={{ opacity: 1, y: 0 }}
-                    threshold={0.1}
-                    rootMargin="-100px"
-                    textAlign="center"
-                    onLetterAnimationComplete={handleAnimationComplete}
-                /></Link>'
-                <Link to="/login"><SplitText
-                    text="login"
-                    className="text-2xl font-semibold text-center"
-                    delay={100}
-                    duration={0.6}
-                    ease="power3.out"
-                    splitType="chars"
-                    from={{ opacity: 0, y: 40 }}
-                    to={{ opacity: 1, y: 0 }}
-                    threshold={0.1}
-                    rootMargin="-100px"
-                    textAlign="center"
-                    onLetterAnimationComplete={handleAnimationComplete}
-                /></Link>
-                <Link to='contest'><SplitText
+                <Link to="/contact"><SplitText
                     text="contact"
                     className="text-2xl font-semibold text-center"
                     delay={100}
@@ -76,4 +49,4 @@ function Header() {
     );
 }
 
-export default Header
+export default Header;
