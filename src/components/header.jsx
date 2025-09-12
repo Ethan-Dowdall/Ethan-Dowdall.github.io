@@ -1,6 +1,6 @@
-import SplitText from './SplitText'
-import SquareIcon from './assets/SquareIcon.png'
-import './header.css'
+import SplitText from '/SplitText'
+import SquareIcon from '/src/assets/SquareIcon.png'
+import '/header.css'
 
 function Header() {
     const handleAnimationComplete = () => {
@@ -9,7 +9,7 @@ function Header() {
     return (
         <div className="headerContainer">
             <div className="headerLeft">
-                <a href=''>
+                <Link to="/">
                 <img src={SquareIcon} className="logo" />
                 <SplitText
                     text="ECD"
@@ -25,10 +25,10 @@ function Header() {
                     textAlign="center"
                     onLetterAnimationComplete={handleAnimationComplete}
                 />
-                </a>
+                </Link>
             </div>
             <div className="headerCenter">
-                <a><SplitText
+                <Link to="/"><SplitText
                     text="home"
                     className="text-2xl font-semibold text-center"
                     delay={100}
@@ -41,9 +41,9 @@ function Header() {
                     rootMargin="-100px"
                     textAlign="center"
                     onLetterAnimationComplete={handleAnimationComplete}
-                /></a>
-                <a><SplitText
-                    text="projects"
+                /></Link>'
+                <Link to="/login"><SplitText
+                    text="login"
                     className="text-2xl font-semibold text-center"
                     delay={100}
                     duration={0.6}
@@ -55,8 +55,8 @@ function Header() {
                     rootMargin="-100px"
                     textAlign="center"
                     onLetterAnimationComplete={handleAnimationComplete}
-                /></a>
-                <a href='contact-page.html'><SplitText
+                /></Link>
+                <Link to='contest'><SplitText
                     text="contact"
                     className="text-2xl font-semibold text-center"
                     delay={100}
@@ -69,7 +69,7 @@ function Header() {
                     rootMargin="-100px"
                     textAlign="center"
                     onLetterAnimationComplete={handleAnimationComplete}
-                /></a>    
+                /></Link>    
             </div>
             <div className="headerRight"></div>
         </div>
